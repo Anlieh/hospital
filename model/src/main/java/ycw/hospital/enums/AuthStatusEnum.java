@@ -1,4 +1,4 @@
-package ycw.hosptial.enums;
+package ycw.hospital.enums;
 
 public enum AuthStatusEnum {
 
@@ -10,6 +10,7 @@ public enum AuthStatusEnum {
 
     private Integer status;
     private String name;
+
 
     AuthStatusEnum(Integer status, String name) {
         this.status = status;
