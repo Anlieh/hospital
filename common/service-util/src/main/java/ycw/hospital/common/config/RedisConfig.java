@@ -1,4 +1,4 @@
-package ycw.hospital.hosp.config;
+package ycw.hospital.common.config;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;

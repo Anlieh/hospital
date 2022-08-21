@@ -1,4 +1,4 @@
-package ycw.hospital.hosp.config;
+package ycw.hospital.common.config;
 
 import com.google.common.base.Predicates;
 import org.springframework.context.annotation.Bean;
@@ -20,7 +20,6 @@ public class Swagger2Config {
 
     @Bean
     public Docket webApiConfig(){
-
         return new Docket(DocumentationType.SWAGGER_2)
                 .groupName("webApi")
                 .apiInfo(webApiInfo())
@@ -33,7 +32,6 @@ public class Swagger2Config {
 
     @Bean
     public Docket adminApiConfig(){
-
         return new Docket(DocumentationType.SWAGGER_2)
                 .groupName("adminApi")
                 .apiInfo(adminApiInfo())
@@ -45,22 +43,20 @@ public class Swagger2Config {
     }
 
     private ApiInfo webApiInfo(){
-
         return new ApiInfoBuilder()
                 .title("网站-API文档")
                 .description("本文档描述了网站微服务接口定义")
                 .version("1.0")
-                .contact(new Contact("atguigu", "http://atguigu.com", "493211102@qq.com"))
+                .contact(new Contact("ycw", "http://www.cwfranklin.top", "534811912@qq.com"))
                 .build();
     }
 
     private ApiInfo adminApiInfo(){
-
         return new ApiInfoBuilder()
                 .title("后台管理系统-API文档")
                 .description("本文档描述了后台管理系统微服务接口定义")
                 .version("1.0")
-                .contact(new Contact("atguigu", "http://atguigu.com", "49321112@qq.com"))
+                .contact(new Contact("ycw", "http://www.cwfranklin.top", "534811912@qq.com"))
                 .build();
     }
 
