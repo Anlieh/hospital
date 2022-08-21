@@ -2,6 +2,7 @@ package ycw.hospital.hosp.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
@@ -15,6 +16,7 @@ import ycw.hospital.common.vo.hosp.HospitalSetQueryVo;
 import java.util.List;
 import java.util.Random;
 
+@Api(tags = "医院设置管理")
 @RestController
 @RequestMapping("/admin/hosp/hospitalSet")
 public class HospitalSetController {
@@ -72,7 +74,7 @@ public class HospitalSetController {
 
 
     // 3 条件查询带分页
-
+    @ApiOperation(value = "条件查询带分页")
     @GetMapping("page/{current}/{limit}")
     public Result findPageHospitalSet(@PathVariable long current,
                                   @PathVariable long limit,
@@ -135,7 +137,7 @@ public class HospitalSetController {
 
     // 9 发送签名秘钥
     @PutMapping("sendKey/{id}")
-    public Result lockHospSet(@PathVariable long id) {
+    public Result sendHospitalKey(@PathVariable long id) {
         HospitalSet hospitalSet = service.getById(id);
         String signKey = hospitalSet.getSignKey();
         String hoscode = hospitalSet.getHoscode();

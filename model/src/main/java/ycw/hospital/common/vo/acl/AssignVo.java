@@ -8,5 +8,5 @@ public class AssignVo {
     private Long roleId;
 
     private Long[] permissionId;
-    
+
 }
