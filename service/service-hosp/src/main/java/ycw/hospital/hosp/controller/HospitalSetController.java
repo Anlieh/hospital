@@ -3,6 +3,7 @@ package ycw.hospital.hosp.controller;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import ycw.hospital.common.model.hosp.HospitalSet;
@@ -18,17 +19,11 @@ import java.util.Random;
 @RequestMapping("/admin/hosp/hospitalSet")
 public class HospitalSetController {
 
-    private final HospitalSetService service;
+    @Autowired
+    private HospitalSetService service;
 
-    public HospitalSetController(HospitalSetService service) {
-        this.service = service;
-    }
 
-    /**
-     * 查询所有医院
-     *
-     * @return list集合
-     */
+    // 1 查询所有医院设置
     @ApiOperation(value = "获取所有医院设置")
     @GetMapping("/all")
     public Result getAllHospitalSet() {

@@ -4,6 +4,6 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@MapperScan("ycw.hospital.mapper")
+@MapperScan("ycw.hospital.hosp.mapper")
 public class HospitalConfig {
 }
